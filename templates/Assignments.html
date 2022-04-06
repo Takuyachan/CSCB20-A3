@@ -1,0 +1,107 @@
+{% extends "template.html" %}
+{% block content %}
+        <div  class="content">
+            
+            <h2 class="subheader">Assignments Overview</h2>
+            <p class="paragraph">Here are the assignment and exercise topics, weights, and due dates. 
+                I will be posting the exercise and assignment handouts here. 
+                All exercises and assignments will be submitted on
+                <a href = "https://markus.utsc.utoronto.ca/cscb20w22", class = "Markus">MarkUs</a>
+            </p>
+
+            <h2 class="subheader">Assignments</h2>
+
+            <div class="table">
+
+                <ul class="row">
+                    <li class="th"></li>
+                    <li class="th">Exercise</li>
+                    <li class="th">Topic (tentative)</li>
+                    <li class="th">Weight</li>    
+                    <li class="th">Due Date</li>   
+                    <li class="th">Solution</li> 
+                </ul>
+
+                <ul class="row">
+                    <li class="td">1</li>
+                    <li class="td">
+                        <a href="B20Assignment2.pdf">Handout</a>
+                    </li>
+                    <li class="td">Relational Algebra and MySQL</li>
+                    <li class="td">15%</li>
+                    <li class="list">
+                        <p>
+                            <ul>
+                                <li>
+                                    Part 1. Wednesday Feb. 1, 11.59pm. Submit to 
+                                    <a href = "https://markus.utsc.utoronto.ca/cscb20w22", class = "Markus">MarkUs</a>
+                                </li>
+                            </ul>
+                        </p>
+                        <div><span class="redden">UPDATED: </span> Part 2 and 3.</div>
+                        <ul>
+                            <li>
+                                For 5% bonus, Saturday Feb. 11, 11.59pm, or
+                            </li>
+                            <li>
+                                Friday Feb. 17, 11.59
+                            </li>
+                            <li>
+                                Submit to 
+                                <a href = "https://markus.utsc.utoronto.ca/cscb20w22", class = "Markus">MarkUs</a>
+                            </li>
+                            <li>You can download a dumpfile for IMDB_SMALL here.
+                                To use it type <span>mysql -u utorid -p &#60; IMDB_SMALL.sql </span>
+                            </li>
+                        </ul>
+  
+                    </li>
+                    <li class ="td">
+                        <a href="Week_1_-_Introduction.pdf">Solution Part1</a>
+                    </li>
+                </ul>
+
+                <ul class="row">
+                    <li class="td">2</li>
+                    <li class="td">
+                        <a href="B20Assignment2.pdf">Handout a2.zip</a>
+                    </li>
+                    <li class="td">HTML, CSS, PHP</li>
+                    <li class="td">15%</li>
+                    <li class="list">
+                        <ul>
+                            <li>
+                                Part 1: worth 50%, Friday March. 10, 11.59pm. Submit to 
+                                <a href = "https://markus.utsc.utoronto.ca/cscb20w22", class = "Markus">MarkUs</a>
+                            </li>
+                            <li>
+                                Part 2: worth 50%, Friday March. 19, 11.59pm. Submit to 
+                                <a href = "https://markus.utsc.utoronto.ca/cscb20w22", class = "Markus">MarkUs</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class ="td"></li>
+                </ul>
+
+                <ul class="row">
+                    <li class="td">3</li>
+                    <li class="td">
+                        <span class="redden">New </span><a href="B20Assignment2.pdf">Marking Scheme for A3 Handout</a>
+                    </li>
+                    <li class="td">Web Application and Database</li>
+                    <li class="td">15%</li>
+                    <li class="td">Friday March 31, 11.59pm</li>
+                    <li class ="td"></li>
+                </ul>
+            </div>
+
+            <h2 class="subheader">FAQ - Assignment 1</h2>
+            <div>
+                Q. If the mysql portion asks for a director or actor without specifying which attributes, what should I return?
+            </div>
+            <div>
+                A. Return the first name, last name.
+            </div>
+
+        </div>
+{% endblock %}

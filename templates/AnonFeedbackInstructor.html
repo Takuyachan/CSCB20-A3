@@ -1,0 +1,41 @@
+{% extends 'template.html' %}
+{% block content %}
+
+    <div class="content">
+        <h2 class="subheader">Anon Feedback Form</h2>
+        <p>Here are the feedbacks from your students. Click on each row to see the details. </p>
+        <p>The following questions were asked. </p>
+        <p>
+            <div>(a) What do you like about the instructor teaching?</div>
+            <div>(b) What do you recommend the instructor to do to improve their teaching?</div>
+            <div>(c) What do you like about the labs?</div>
+            <div>(d) What do you recommend the lab instructors to do to improve their lab teaching?</div>
+        </p>
+        
+        <div class = "table feedback">
+            <div class="tablebody table">
+                <ul class="row">
+                    <li class="th"></li>
+                    <li class="th">Course</li>    
+                    <li class="th">Submitted Time</li>
+                    <li class="th">Feedback</li>  
+                </ul>
+                {% for feedback in resultfeedback %}
+                <ul class="row">
+                    <li class="td num"></li>
+                    <li class="td coursecode">{{ feedback[0] }}</li>
+                    <li class="td time">{{ feedback[1][0:19] }}</li>
+                    <li class="td feedback">
+                        <div>(a) {{ feedback[2]}}</div><br>
+                        <div>(b) {{ feedback[3]}}</div><br>
+                        <div>(c) {{ feedback[4]}}</div><br>
+                        <div>(d) {{ feedback[5]}}</div>
+                    </li>
+                    
+                </ul>
+                {% endfor %}
+            </div>
+        </div>
+    </div>  
+
+{% endblock %}

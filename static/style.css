@@ -1,0 +1,353 @@
+html {overflow: -moz-scrollbars-vertical;}
+
+
+body {
+	display: flex;
+    flex-direction: column;
+    background: aliceblue;
+    min-height: 100vh;
+}
+
+.container{
+    flex-grow: 1;
+}
+
+.pagetop{
+    background-image: url("uoftlogo2.png"), linear-gradient(slateblue, skyblue) ;
+    /* The U of T logo was taken from https://www.subpng.com/png-73q4lx/, 
+    opacity edited at https://onlinepngtools.com/change-png-opacity */
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pagetop a:hover {
+    text-decoration:none;
+    font-style: italic;
+    color:yellow;
+}
+
+.header{
+    text-align: center;
+    padding: 30px;
+    margin: auto;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.sidebarul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li a{
+    position: relative;
+}
+
+
+.nav ul li a:hover::after {
+    width: 100%;
+}
+
+.linklistitem{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1199px){
+    .nav ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+  
+@media screen and (min-width: 1200px){
+    .nav ul {
+        display:-webkit-box;
+        display:-ms-flexbox;  
+        display: flex;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+}
+  
+  
+@media screen and (min-width: 1200px){
+    .nav ul li{
+        display: inline;
+        padding-right: 30px;
+    }
+}
+  
+@media screen and (max-width: 1199px){
+    .nav ul li {
+        padding-right: 30px;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .nav ul li a::after {
+        position: absolute;
+        content:"";
+        display: block;
+        height: 3px;
+        background-color: yellow;
+        bottom: -10px;
+        left: 0;
+        width: 0;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+}
+  
+@media screen and (max-width: 1199px){
+    .nav ul li a::after {
+      position: absolute;
+      content:"";
+      display: block;
+      height: 3px;
+      background-color: yellow;
+      bottom: -1px;
+      left: 0;
+      width: 0;
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+    }
+}
+
+.content{
+    padding: 10px;
+    position: relative;
+    text-align: left;
+}
+
+.content a:hover {
+    text-decoration:none;
+    color:rgb(101, 157, 221);
+}
+
+.subheader{
+    padding: 10px;
+    color: black;
+    background: rgb(220, 221, 221);
+    border-left: solid 5px skyblue;
+    border-bottom: solid 3px gray;
+}
+
+.smallheader{
+    padding: 0.5rem 1rem;
+    border-left: 5px double rgb(64, 111, 238);
+}
+
+.names{
+    position: relative;
+    padding-bottom:5px;
+    top: 0;
+    left:0;
+}
+
+.names::before{
+    position:absolute;
+    bottom:0;
+    content:'';
+    width: 150px;
+    border-bottom: 3px dashed skyblue;
+}
+
+.simpletable{
+    display: table;
+    border-collapse: collapse;
+}
+
+.hometd{
+    display: table-cell;
+    width: 150px;
+}
+
+.table{
+    display: table;
+    table-layout: auto;
+    border-collapse: collapse;
+    width: 100%;
+    vertical-align: baseline;
+    border: 0;
+    font-size: 2vmin;
+}
+
+.row{
+    display: table-row;
+    border: 1px solid #ccc;
+}
+.th{
+    display: table-cell;
+    background: linear-gradient(skyblue,cornflowerblue);
+    padding: 10px;
+    font-size: 150%;
+    border-bottom: 1px solid rgb(158, 158, 158);
+    border: 1px solid #ccc;
+    text-shadow: 2px 2px 0 rgba(0,0,0,.2);
+    text-align: center;
+}
+
+.td{
+    display: table-cell;
+    padding: 10px;
+    border-bottom: 1px solid rgb(158, 158, 158);
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.list{
+    display: table-cell;
+    padding: 10px;
+}
+
+    
+.bolding {
+    font-weight: bold;
+}
+
+.redden{
+    color: red;
+}
+
+.formboxcontainer{
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.formbox{
+    width:70%;
+    height: 150px;
+}
+
+.button{
+    background-color: rgb(186, 228, 248);
+    border-bottom: 8px solid rgb(206, 206, 206);
+    width: 100px;
+    height: 30px;
+}
+
+.button:hover{
+    margin-top:3px;
+    color:black;
+    background:rgb(186, 228, 248);
+    border-bottom: 4px solid rgb(206, 206, 206);
+}
+
+
+.form_container{
+    background: rgb(220, 221, 221);
+    margin: 3em auto;
+    padding: 0 1em;
+    max-width: 370px;
+}
+
+.log_header{
+    text-align: center;
+    padding: 1em 0;
+}
+
+.loginform{
+    padding: 0 1.5em;
+}
+
+.form_item{
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.form_item input{
+    border: none;
+    border-bottom: 2px solid gray;
+    height: 50px;
+    width: 100%;
+}
+
+.form-item input:focus{
+    border-bottom: 2px solid rgb(185, 185, 185);
+    outline: none;
+}
+
+.opt_message{
+    text-align: center;
+}
+
+.signup_error_message{
+    text-align: center;
+    color: red;
+}
+
+.buttonpanel{
+    margin: 2em 0 0;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.buttonpanel .log_button{
+    background:rgb(92, 152, 220);
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background 0.3s ease-in-out;
+    width: 100%;
+}
+
+.log_button:hover{
+    background:rgb(64, 111, 238);
+}
+
+.form_bottom {
+    padding: 2em 0;
+    text-align: center;
+}
+
+.form_bottom_text{
+    text-align: center;
+}
+
+.form_bottom a {
+    text-decoration: none;
+    transition: border-color 0.3s;
+}
+
+.form_bottom a:hover{
+    border-bottom: 1px dotted rgb(163, 163, 163);
+}
+
+#footer{
+    width: 100%;
+    height: 60px;
+    top: 100vh;
+    padding-top: 20px;
+    background: cornflowerblue;
+}
+
+#footercontent{
+    padding-left: 15px;
+    vertical-align: middle;
+    font-size: 15px;
+}
+
+#footercontent2{
+    float: right;
+    padding-top: 15px;
+    padding-right: 15px;
+    vertical-align: bottom;
+    font-size: 12px;
+}
+
+
+
